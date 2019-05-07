@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function addition(){
+
+var a,b,c; 
+
+a = window.document.frm.t1.value;
+b = window.document.frm.t2.value;
+
+if(a == ""){
+window.alert("first number is missing");
+ window.document.frm.t1.focus();
+}
+else if(b == ""){
+window.alert("second number is missing");
+ window.document.frm.t2.focus();
+}else{
+c= parseInt(a)+parseInt(b); 
+window.document.frm.t3.value=c;
+}
+}
+
+</script>
+<head>
+<style>
+body {background-color: brown;}
+h1   {color: white;}
+p    {color: white;}
+</style>
+</head>
+<body>
+
+<h1 style="border:2px solid Tomato;">THE info</h1>
+<h1 style="border:2px solid Tomato;">THE SHAFEEQ</h1>
+<center><h2> SHAFEEQ is a trainer </h2> 
+<br>
+<h3> lives in </h3>
+<h4> Manchsester </h4>
+<br>
+<iframe width="800" height="480"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+<br>
+<a href ="http://www.bbc.co.uk"> BBC </a>
+<br>
+<a href = "a.html">the shafeeq </a>
+</center>
+<form name = "frm">
+<p style="color:white">
+First no: <input type = "text" name = "t1" > <br>
+second no: <input type = "text" name = "t2" > <br>
+<input type = "button" value="click" name= "btn" onclick = "addition()">
+result:<input type = "text" name ="t3">
+</p>
+</form>
+</body>
+</html>

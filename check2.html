@@ -1,0 +1,45 @@
+
+<html>
+<script>
+var a,b,c; 
+
+function add(){
+
+frm = window.document.forms[1];
+for (var i = 0; i < frm.elements.length ; i++){
+	if(frm.elements[i].type=="text"){
+	if(frm.elements[i].value==""){
+		window.alert("Data missing in text box no "+(i+1));
+		frm.elements[i].value="is empty"; 
+		}
+		
+}
+
+}
+
+
+}
+</script>
+<body>
+
+<form>
+
+</form>
+
+<form>
+<input>
+<input>
+<input>
+<input>
+<input>
+<input>
+<input type="button">
+<input type="button">
+<input type="button">
+<input type="button">
+
+<input type = "button" value = "click me" onclick = "add()">
+</form>
+
+</body>
+</html>

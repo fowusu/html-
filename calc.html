@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<script>
+var a,b,firstNo,secondNo,total;
+
+function maths(d){
+   
+  if (d == 0){
+   
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 1){
+ 
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 2){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 3){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 4){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 5){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 6){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 7){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 8){
+  window.document.frm.t1.value+=d;
+  }
+  if (d == 9){
+  window.document.frm.t1.value+=d;
+  }
+  secondNo = parseInt(window.document.frm.t1.value);
+}
+
+function calc(e){
+  if (e == "+"){
+  firstNo = parseInt(window.document.frm.t1.value);
+  window.document.frm.t1.value="";
+  total = firstNo + secondNo; 
+  }
+  
+  if (e == "-"){
+  
+  firstNo = parseInt(window.document.frm.t1.value);
+  window.document.frm.t1.value="";
+  total = firstNo - secondNo; 
+  
+  }
+  if (e == "/"){
+  firstNo = parseInt(window.document.frm.t1.value);
+  window.document.frm.t1.value="";
+  total = firstNo / secondNo; 
+  }
+  if (e == "c"){
+  window.document.frm.t1.value="";
+  }
+  if (e == "="){
+  alert(total);
+  window.document.frm.t1.value=total;
+}
+
+}
+
+</script>
+<style>
+body {background-color: brown;}
+h1   {color: white;}
+p    {color: white;}
+</style>
+
+<body>
+<form name = "frm">
+<table>
+<tr>
+<input type = "text" name = "t1" > 
+</tr>
+<tr>
+<td> <input type = "button" value="0" name = "b0" onclick = "maths(0)" > </td>
+<td> <input type = "button" value="1" name = "b1" onclick = "maths(1)" > </td>
+<td> <input type = "button" value="2" name = "b2" onclick = "maths(2)" > </td>
+</tr>
+<tr>
+<td> <input type = "button" value="3" name = "b3" onclick = "maths(3)"> </td>
+<td> <input type = "button" value="4" name = "b4" onclick = "maths(4)"> </td>
+<td> <input type = "button" value="5" name = "b5" onclick = "maths(5)"> </td>
+</tr>
+<tr>
+<td> <input type = "button" value="6" name = "b6" onclick = "maths(6)"> </td>
+<td> <input type = "button" value="7" name = "b7" onclick = "maths(7)"> </td>
+<td> <input type = "button" value="8" name = "b8" onclick = "maths(8)"> </td>
+</tr>
+<tr>
+<td> <input type = "button" value="9" name = "b9" onclick = "maths(9)"> </td>
+<td> <input type = "button" value="+" name = "bplus" onclick = "calc('+')"> </td>
+<td> <input type = "button" value="- " name = "bminus" onclick = "calc('-')"> </td>
+</tr>
+<tr>
+<td> <input type = "button" value="/ " name = "bdiv" onclick = "calc('/')"> </td>
+<td> <input type = "button" value="C" name = "bClr" onclick = "calc('c')"> </td>
+<td> <input type = "button" value="=" name = "bEql" onclick = "calc('=')"> </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

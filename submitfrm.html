@@ -1,0 +1,50 @@
+<html>
+<script>
+
+function checkForm(){
+var r = true;
+
+if(window.document.forms[0].elements[0].value==""){
+var ref=window.document.getElementById("n1");
+ref.style.visibility="visible";
+r=false; 
+}
+
+if(window.document.forms[0].elements[1].value==""){
+var ref=window.document.getElementById("n2");
+ref.style.visibility="visible";
+r=false; 
+}
+
+if(window.document.forms[0].elements[2].value==""){
+var ref=window.document.getElementById("n3");
+ref.style.visibility="visible";
+r=false; 
+}
+
+if(window.document.forms[0].elements[3].value==""){
+var ref=window.document.getElementById("n4");
+ref.style.visibility="visible";
+r=false; 
+}
+return r; 
+}
+
+</script>
+
+<body>
+<form action="shafeeq.html" onsubmit="return checkForm()">
+
+first name:<input type="text" name="n"> <span id="n1" style="color:red; visibility:hidden"> *first name is missing</span><br>
+surname:<input type="text" name="n"><span id="n2" style="color:red; visibility:hidden"> *surname is missing</span><br>
+company:<input type="text" name="n"><span id="n3" style="color:red; visibility:hidden"> *company is missing</span><br>
+post code:<input type="text" name="p"><span id="n4" style="color:red; visibility:hidden"> *post code is missing</span><br>
+<input type="submit" value="click to submit" >
+
+</form>
+</body>
+
+
+
+
+</html>

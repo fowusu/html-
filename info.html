@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function addition(){
+
+var phys,chem,math,totalmarks,percentage,name; 
+
+phys = parseInt(window.document.frm.t2.value);
+chem = parseInt(window.document.frm.t3.value);
+math = parseInt(window.document.frm.t4.value);
+name = parseInt(window.document.frm.t.value);
+
+totalmarks = phys + chem + math; 
+percentage = totalmarks * 100/450; 
+
+
+if(name == ""){
+window.alert("please enter the name");
+ window.document.frm.t1.focus();
+}
+else if(phys == ""){
+window.alert("enter physics marks");
+ window.document.frm.t2.focus();
+}
+else if(chem == ""){
+window.alert("enter chemistry marks");
+ window.document.frm.t3.focus();
+}
+else if(math == ""){
+window.alert("enter maths marks");
+ window.document.frm.t4.focus();
+}
+
+if (percentage >= 90){
+window.document.frm.t7.value= "A+"; 
+}
+else if (percentage >= 80){
+window.document.frm.t7.value= "A"; 
+}
+else if (percentage >= 70){
+window.document.frm.t7.value= "B"; 
+}
+else if (percentage >= 60){
+window.document.frm.t7.value= "C"; 
+}
+else{
+window.document.frm.t7.value= "fail"; 
+}
+
+window.document.frm.t6.value= percentage; 
+window.document.frm.t5.value= totalmarks; 
+}
+
+</script>
+<head>
+<style>
+body {background-color: grey;}
+h1   {color: white;}
+p    {color: white;}
+</style>
+</head>
+<body>
+
+
+<br>
+<a href = "a.html">the shafeeq </a>
+</center>
+<form name = "frm">
+<p style="color:white">
+NAME: <input type = "text" name = "t1" > <br>
+PHYSICS: <input type = "text" name = "t2" > <br>
+CHEMISTRY: <input type = "text" name = "t3" > <br>
+MATH: <input type = "text" name = "t4" > <br>
+TOTAL MARKS: <input type = "text" name = "t5" > <br>
+PERCENTAGE: <input type = "text" name = "t6" > <br>
+RESULT: <input type = "text" name = "t7" > <br>
+<input type = "button" value="click" name= "btn" onclick = "addition()">
+
+</p>
+</form>
+</body>
+</html>

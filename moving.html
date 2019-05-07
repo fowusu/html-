@@ -1,0 +1,75 @@
+<html>
+
+<script>
+var ss = 12; 
+
+function moving(){
+
+var span = window.document.getElementById("s"); 
+span.style.top = window.event.clientY;
+span.style.left = window.event.clientX;
+
+if (window.event.altKey){
+ss++
+span.style.fontSize =  ss; 
+}
+if (window.event.ctrlKey){
+ss--;
+span.style.fontSize =  ss; 
+}
+
+
+}
+
+function leave(){
+
+var span = window.document.getElementById("s"); 
+var txtBox = window.document.getElementById("t").value; 
+span.innerHTML=txtBox;
+
+}
+
+function clr(d){
+
+var op = d;
+var span = window.document.getElementById("s"); 
+
+if(op == 1){
+span.style.color="blue";
+}
+if(op == 2){
+span.style.color="yellow";
+}
+if(op == 3){
+span.style.color="green";
+}
+if(op == 4){
+span.style.color="red";
+}
+
+
+}
+
+</script>
+
+<body onmousemove ="moving()">
+
+<input type ="text" id="t" onmousemove="leave()">
+
+<span style="position:absolute; top:0;left:0;" id="s">
+
+THE SHAFEEQ 
+
+</span>
+
+<div style = "background-color:blue; position:absolute; height:80; width:80; top:100;left:0;" onmouseenter="clr(1)" id="blue" >
+</div>
+<div style = "background-color:yellow; position:absolute; height:80; width:80; top:100; left:500;" onmouseenter="clr(2)" id="yellow" >
+</div>
+<div style = "background-color:green; position:absolute; height:80; width:80; top:500; left:0;" onmousemove="clr(3)" id="green" >
+</div>
+<div style = "background-color:red; position:absolute; height:80; width:80; top:500; left:500;" onmousemove="clr(4)" id="red" >
+</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+
+<html>
+<script>
+function increment(){
+
+//window.doucment.forms[0].elements[0].value=
+
+parseInt(window.document.forms[0].elements[0].value)+1; 
+
+}
+
+</script>
+
+<body>
+
+<div style = "color:green; background-color:blue; position:absolute; top:100; left:1" onmousemove="increment()">
+
+increment
+
+</div>
+
+<div style = "color:white; background-color:red; position:absolute; top:100; left:500" onmousemove="increment()">
+
+decrement 
+
+</div>
+
+<div style = "color:white; background-color:red; position:absolute; top:1; left:200" onmousemove="increment()">
+<form>
+<input value ="0">
+</form>
+</div>
+
+
+
+</body>
+</html>
